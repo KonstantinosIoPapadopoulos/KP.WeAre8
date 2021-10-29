@@ -37,28 +37,30 @@ namespace KP.WeAre8.API.Controllers
             //string[] Urls = {"https://cdn-test.test.aws.the8app.com/feedsponsorships.json",
             //    "https://cdn-test.test.aws.the8app.com/communitytiles.json",
             //    "https://cdn-test.test.aws.the8app.com/communitytiles.json" };
-            //SortByRule[] rules = { new SortByRule() { SortKey = "createdDate", SortOrderDesc  = true },
+            //SortByRule[] rules = { new SortByRule() { SortKey = "updatedDate", SortOrderDesc  = true },
 
             //new SortByRule() { SortKey = "updatedDate", SortOrderDesc  = false }};
             //var results = await _dataMergerService.ReturnDataAsync(Urls, rules);
 
-            //{
-            //    "urls": [
-            //      "https://cdn-test.test.aws.the8app.com/feedsponsorships.json",
-            //    "https://cdn-test.test.aws.the8app.com/communitytiles.json",
-            //    "https://cdn-test.test.aws.the8app.com/communitytiles.json"
-            //  ],
-            //  "rules": [
-            //    {
-            //        "sortKey": "createdDate",
-            //      "sortOrderDesc": true
-            //    },
-            //    {
-            //        "sortKey": "updatedDate",
-            //      "sortOrderDesc": false
-            //    }
-            //  ]
-            //}
+            /*
+            {
+                "urls": [
+                  "https://cdn-test.test.aws.the8app.com/feedsponsorships.json",
+                "https://cdn-test.test.aws.the8app.com/communitytiles.json",
+                "https://cdn-test.test.aws.the8app.com/communitytiles.json"
+              ],
+              "rules": [
+                {
+                    "sortKey": "updatedDate",
+                  "sortOrderDesc": true
+                },
+                {
+                    "sortKey": "createdDate",
+                  "sortOrderDesc": false
+                }
+              ]
+            }
+            */
 
             var results = await _dataMergerService.ReturnDataAsync(postData.Urls, postData.Rules);
             return JsonConvert.SerializeObject(results.Data);

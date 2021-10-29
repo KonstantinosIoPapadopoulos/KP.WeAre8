@@ -40,6 +40,12 @@ namespace KP.WeAre8.API
                                   {     // Must place the azure URL of .web
                                       builder.WithOrigins("https://localhost:5001").AllowAnyHeader().AllowAnyMethod();
                                   });
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {     // Must place the azure URL of .web
+                                      builder.WithOrigins("https://localhost:44305").AllowAnyHeader().AllowAnyMethod();
+                                  });
+            
             });
 
         }

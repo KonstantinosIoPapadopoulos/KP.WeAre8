@@ -91,7 +91,7 @@ namespace KP.WeAre8.Core.Services
             var sortedList = new List<Dictionary<string, object>>();
             try
             {
-                sortedList = listOfDictionaries.OrderByDescending(itemDictionary => itemDictionary["createdDate"]).ToList();
+                sortedList = listOfDictionaries.OrderByDescending(itemDictionary => itemDictionary["updatedDate"]).ToList();
             }
             catch (Exception)
             {
